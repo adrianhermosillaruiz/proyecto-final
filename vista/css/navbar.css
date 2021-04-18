@@ -1,0 +1,132 @@
+/* GENERAL */
+
+:root {
+	--white: #fafafa;
+	--grey: #bbbbbb;
+	--black: #272727;
+	--orange: #f99820;
+	--blue: #2081f9;
+}
+
+body {
+	background-color: lightgreen;
+}
+
+/* ======= NAVBAR ======= */
+
+.navbar {
+	background-color: white;
+	position: sticky;
+	top: 0;
+}
+
+/* Reseteo el tamaño del navbar */
+.navbar-toggler,
+.navbar {
+	padding: 0px;
+	/* font-size: 1.5em; */
+}
+
+/* Enlaces del navbar */
+.nav-item {
+	margin-left: 20px;
+}
+
+.navbar-toggler.toggler-example {
+	cursor: pointer;
+}
+
+/* Secciones del navbar */
+.box {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	padding: 0px 0px; /* Tamaño del navbar */
+	align-items: center;
+}
+
+.box i {
+	color: var(--orange);
+	font-size: 1.3em;
+}
+
+.box > i,
+.box > button,
+.box > input,
+.box > a {
+	margin: 0px 5px;
+}
+
+.box > button {
+	background-color: transparent;
+	border: none;
+}
+
+/* En móvil, no se muestra la barra de búsqueda */
+.searchbar {
+	display: none;
+	padding: 6px 0px;
+	padding-right: 6px;
+}
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Mediaquery Tablet (500px) */
+@media screen and (min-width: 500px) {
+	/* Muestro la barra de búsqueda, oculto la lupa */
+	.searchbar {
+		display: flex;
+	}
+
+	.search-icon {
+		display: none;
+	}
+
+	/* Barra de búsqueda más grande a mayor resolución */
+	.center {
+		flex-basis: 33%;
+	}
+
+	.searchbar {
+		width: 100%;
+	}
+}
+
+/* Mediaquery Escritorio (900px) */
+@media screen and (min-width: 900px) {
+	/* Márgenes a los iconos */
+	.navbar {
+		padding-left: 75px;
+		padding-right: 75px;
+	}
+
+	/* Muestro la barra de búsqueda, oculto la lupa */
+	.searchbar {
+		display: flex;
+	}
+
+	.search-icon {
+		display: none;
+	}
+
+	/* Barra de búsqueda más grande a mayor resolución */
+	.center {
+		flex-basis: 33%;
+	}
+
+	.searchbar {
+		width: 100%;
+	}
+}
+
+.escaparate {
+	background-color: red;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
